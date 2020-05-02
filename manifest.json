@@ -1,0 +1,6 @@
+  {
+    "name": "TOHacks-Extension",
+    "version": "1.0",
+    "description": "Our Chrome Extension",
+    "manifest_version": 2
+  }
