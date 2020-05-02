@@ -2,5 +2,14 @@
     "name": "TOHacks-Extension",
     "version": "1.0",
     "description": "Our Chrome Extension",
+    "permissions": ["storage"],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "page_action": {
+      "default_popup": "popup.html"
+    },
     "manifest_version": 2
+
   }
