@@ -10,5 +10,5 @@ chrome.contextMenus.create({
 });
 
 
-
+chrome.browserAction.setBadgeText({text: "badge"});
 console.log("test");
