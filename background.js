@@ -1,13 +1,14 @@
-factCheck = function(userSelection) {
-	let userText = userSelection.selectionText;
-	console.log(userText);
-};
+function getText() {
+	let allInfo = chrome.windows.getCurrent;
+	let text = allInfo;
+	return text;
+}
 
-chrome.contextMenus.create({
- title: "Fact Check",
- contexts:["selection"],
- onclick: factCheck
-});
+chrome.tabs.onUpdated.addListener( function (tabId, changeInfo, tab) {
+  if (changeInfo.status == 'complete') {
+  	console.log(getText());
+  }
+})
 
 
 chrome.browserAction.setBadgeText({text: "badge"});
