@@ -1,13 +1,3 @@
-function getText(){
-    return document.body.innerText
-}
-
-let allText = getText();
-let splitText = allText.split("\n");
-for(i=0; i<splitText.length; i++) {
-	console.log(splitText[i]);
-}
-
 // https://stackoverflow.com/questions/18784920/how-to-add-dom-element-script-to-head-section
 load_script = function(src) {
     // Initialize scripts queue
@@ -58,26 +48,3 @@ load_script = function(src) {
  "model.js",
 ].forEach(load_script);
 
-// var f1  = document.createElement ("script");
-// f1.src  = "https://cdn.jsdelivr.net/npm/@tensorflow/tfjs";
-// document.getElementsByTagName('head')[0].appendChild(f1);
-
-// var f2  = document.createElement ("script");
-// f2.src  = "https://cdn.jsdelivr.net/npm/@tensorflow-models/toxicity";
-// document.getElementsByTagName('head')[0].appendChild(f2);
-
-// var f3  = document.createElement ("script");
-// f3.type = 'text/javascript';
-// f3.src  = "model.js";
-// document.getElementsByTagName('head')[0].appendChild(f3);
-
-
-
-
-// const threshold = 0.9;
-// toxicity.load(threshold).then(model => {
-//   const sentences = splitText;
-//   model.classify(sentences).then(predictions => {
-//     console.log(predictions);
-//   });
-// });
