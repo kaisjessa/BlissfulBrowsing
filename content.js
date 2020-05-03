@@ -45,6 +45,8 @@ load_script = function(src) {
 
 ["https://cdn.jsdelivr.net/npm/@tensorflow/tfjs",
  "https://cdn.jsdelivr.net/npm/@tensorflow-models/toxicity",
- "model.js",
+ "toxicityprediction.js",
 ].forEach(load_script);
+
+console.log("SCRIPTS LOADED");
 
