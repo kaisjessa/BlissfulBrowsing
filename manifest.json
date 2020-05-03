@@ -21,6 +21,7 @@
 		"default_popup": "popup.html"
 	},
 	"web_accessible_resources": ["toxicityprediction.js"],
+	"icons": {"128": "unknown.png" },
     "manifest_version": 2
 
   }

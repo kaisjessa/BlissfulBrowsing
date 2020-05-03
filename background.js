@@ -3,7 +3,4 @@ chrome.tabs.onUpdated.addListener( function (tabId, changeInfo, tab) {
 
   }
 })
-
-
-chrome.browserAction.setBadgeText({text: "badge"});
 console.log("test");

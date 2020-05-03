@@ -25,7 +25,7 @@ let splitText = allText.filter(word => word.length > 2);
 console.log("NUMBER OF PHRASES:", splitText.length);
 
 // The minimum prediction confidence.
-const threshold = 0.5;
+const threshold = 0.05;
 let filter = [];
 let num = 0;
 // Load the model. Users optionally pass in a threshold and an array of
