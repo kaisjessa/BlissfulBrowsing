@@ -12,22 +12,7 @@ console.log("NUMBER OF PHRASES:", splitText.length);
 const threshold = 0.05;
 let filter = [];
 let num = 0;
-// Load the model. Users optionally pass in a threshold and an array of
-// labels to include.
-// WORKS BUT SLOW
-// toxicity.load(threshold).then(model => {
-//   const sentences = splitText;
-//   for(let i=0; i<sentences.length; i++) {
-//     model.classify([sentences[i]]).then(prediction => {
-//       if(prediction[6].results[0].match == true) {
-//         document.body.innerHTML = document.body.innerHTML.replace(sentences[i], '[removed due to toxicity]');
-//         console.log(sentences[i], "REPLACED");
-//       }
-//     })
-//   }
-// });
 
-// WORKS BUT CRASHES A LOT
 toxicity.load(threshold).then(model => {
   let sentences = splitText;
   model.classify(sentences).then(prediction => {
