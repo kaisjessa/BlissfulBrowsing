@@ -35,8 +35,7 @@ let num = 0;
 //   const sentences = splitText;
 //   for(let i=0; i<sentences.length; i++) {
 //     model.classify([sentences[i]]).then(prediction => {
-//       num = prediction[6].results[0].probabilities[1]
-//       if(num >= threshold) {
+//       if(prediction[6].results[0].match == true) {
 //         document.body.innerHTML = document.body.innerHTML.replace(sentences[i], '[removed due to toxicity]');
 //         console.log(sentences[i], "REPLACED");
 //       }
@@ -44,11 +43,11 @@ let num = 0;
 //   }
 // });
 
-// FACT BUT CRASHES A LOT
+// WORKS BUT CRASHES A LOT
 toxicity.load(threshold).then(model => {
   let sentences = splitText;
   model.classify(sentences).then(prediction => {
-    for(let j=0; j<Math.min(prediction[6].results.length, 5);j++) {
+    for(let j=0; j<prediction[6].results.length;j++) {
       filter.push(prediction[6].results[j].match);
       //console.log(prediction[6].results[j].match);
     };
